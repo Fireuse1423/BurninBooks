@@ -1,0 +1,93 @@
+body {
+  background: radial-gradient(circle at 60% 20%, #ffae42 0%, #ff6a00 80%, #7a2c00 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.div3 {
+  background: linear-gradient(120deg, #ffae42 60%, #ff3c00 100%);
+  border: 2px solid #ff6a00;
+  border-radius: 16px;
+  box-shadow: 0 0 40px 10px #ffae4288;
+  padding: 28px;
+  color: #fffbe6;
+  font-size: 30px;
+  text-align: center;
+  margin: 36px auto 24px auto;
+  max-width: 750px;
+  animation: flame-flicker 1.5s infinite alternate;
+}
+
+.div4 {
+  background: linear-gradient(120deg, #ff6a00 60%, #ffae42 100%);
+  border: 2px solid #ff3c00;
+  border-radius: 12px;
+  box-shadow: 0 0 24px 6px #ff6a0088;
+  padding: 22px;
+  color: #7a2c00;
+  font-size: 24px;
+  text-align: left;
+  margin: 24px auto 36px auto;
+  max-width: 650px;
+  animation: flame-rise 2s infinite alternate;
+}
+
+a {
+  color: #ffe600;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff6a00, 0 0 4px #fff;
+  transition: color 0.2s, text-shadow 0.2s;
+  animation: glow-pulse 1.2s infinite alternate;
+}
+
+a:hover {
+  color: #ff3c00;
+  text-shadow: 0 0 20px #ffe600, 0 0 10px #ffae42;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 12px 0;
+  font-size: 22px;
+}
+
+@keyframes flame-flicker {
+  0% { box-shadow: 0 0 40px 10px #ffae4288; }
+  50% { box-shadow: 0 0 60px 20px #ffae42cc; }
+  100% { box-shadow: 0 0 40px 10px #ffae4288; }
+}
+
+@keyframes flame-rise {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0% { text-shadow: 0 0 10px #ff6a00, 0 0 4px #fff; }
+  100% { text-shadow: 0 0 20px #ffe600, 0 0 10px #ffae42; }
+}
+button {
+  background: linear-gradient(90deg, #ff6a00 0%, #ffae42 100%);
+  color: #fffbe6;
+  border: 2px solid #ff3c00;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 0 16px 4px #ffae4288;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  animation: flame-flicker 1.2s infinite alternate;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff3c00 0%, #ffae42 100%);
+  box-shadow: 0 0 32px 8px #ffae42cc;
+  transform: scale(1.07);
+}
